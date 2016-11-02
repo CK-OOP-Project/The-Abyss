@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="메인 파일">
+      <UniqueIdentifier>{c35f16d9-efe2-4cee-abc9-37b024365f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="콘솔 인터페이스 파일">
+      <UniqueIdentifier>{1081e083-cfd7-46b2-85c8-7116b8ba9839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="씬 파일">
+      <UniqueIdentifier>{b74a8b86-a597-4119-ac91-bd36e3d8f66f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="유틸 파일">
+      <UniqueIdentifier>{df859afd-c8db-4fd2-bfc0-fb284e011bca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="코어 파일">
+      <UniqueIdentifier>{e1904e7b-fb3c-42d5-a0d5-140766989001}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleTextBox.h">
+      <Filter>콘솔 인터페이스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOption.h">
+      <Filter>콘솔 인터페이스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleText.h">
+      <Filter>콘솔 인터페이스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroScene.h">
+      <Filter>씬 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene.h">
+      <Filter>씬 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sleep.h">
+      <Filter>유틸 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="steamb23console.h">
+      <Filter>유틸 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>메인 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>메인 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Stat.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EqupItem.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AbyssGame.h">
+      <Filter>메인 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="The Abyss.cpp">
+      <Filter>메인 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOption.cpp">
+      <Filter>콘솔 인터페이스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleText.cpp">
+      <Filter>콘솔 인터페이스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleTextBox.cpp">
+      <Filter>콘솔 인터페이스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroScene.cpp">
+      <Filter>씬 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>씬 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sleep.cpp">
+      <Filter>유틸 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="steamb23console.cpp">
+      <Filter>유틸 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>메인 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerData.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Stat.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EqupItem.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AbyssGame.cpp">
+      <Filter>메인 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
