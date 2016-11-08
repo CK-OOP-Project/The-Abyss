@@ -9,6 +9,9 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <exception>
+// 표준 예외
+#include <stdexcept>
 #include <Windows.h>
 #include <string.h>
 #include <iostream>
