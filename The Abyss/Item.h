@@ -1,5 +1,5 @@
 #pragma once
-#include "stdafx.h"
+#include <memory>
 class Item
 {
 	std::shared_ptr<std::string> name;

@@ -1,5 +1,7 @@
 #pragma once
+#include <memory>
 #include "Item.h"
+#include "Status.h"
 enum class EquipType
 {
 	Weapon,
@@ -17,8 +19,10 @@ public:
 	virtual ~EquipItem();
 
 	EquipType GetEquipType() { return this->equipType; };
+	std::shared_ptr<Status> GetProperty() { return this->property; };
 
 private:
 	EquipType equipType;
+	std::shared_ptr<Status> property;
 };
 

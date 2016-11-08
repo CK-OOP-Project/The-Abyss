@@ -25,8 +25,17 @@
     <Filter Include="유틸 파일">
       <UniqueIdentifier>{df859afd-c8db-4fd2-bfc0-fb284e011bca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="코어 파일">
+    <Filter Include="프레임워크 파일">
       <UniqueIdentifier>{e1904e7b-fb3c-42d5-a0d5-140766989001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="게임 코어 파일">
+      <UniqueIdentifier>{081d5fc0-39dd-4be9-9c43-e58957d81e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="아이템">
+      <UniqueIdentifier>{6cae3bde-a88a-4578-a3ae-cf2443532a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="몬스터">
+      <UniqueIdentifier>{02e92840-6f88-4894-be06-9f1d19113831}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -61,28 +70,28 @@
       <Filter>메인 파일</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>코어 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>코어 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerData.h">
-      <Filter>코어 파일</Filter>
+      <Filter>프레임워크 파일</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>코어 파일</Filter>
+      <Filter>프레임워크 파일</Filter>
     </ClInclude>
     <ClInclude Include="SceneManager.h">
-      <Filter>코어 파일</Filter>
+      <Filter>프레임워크 파일</Filter>
     </ClInclude>
     <ClInclude Include="AbyssGame.h">
       <Filter>메인 파일</Filter>
     </ClInclude>
     <ClInclude Include="EquipItem.h">
-      <Filter>코어 파일</Filter>
+      <Filter>게임 코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>게임 코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>게임 코어 파일</Filter>
     </ClInclude>
     <ClInclude Include="Status.h">
-      <Filter>코어 파일</Filter>
+      <Filter>게임 코어 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -114,28 +123,28 @@
       <Filter>메인 파일</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>코어 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>코어 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerData.cpp">
-      <Filter>코어 파일</Filter>
+      <Filter>프레임워크 파일</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>코어 파일</Filter>
+      <Filter>프레임워크 파일</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
-      <Filter>코어 파일</Filter>
+      <Filter>프레임워크 파일</Filter>
     </ClCompile>
     <ClCompile Include="AbyssGame.cpp">
       <Filter>메인 파일</Filter>
     </ClCompile>
     <ClCompile Include="EquipItem.cpp">
-      <Filter>코어 파일</Filter>
+      <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerData.cpp">
+      <Filter>게임 코어 파일</Filter>
     </ClCompile>
     <ClCompile Include="Status.cpp">
-      <Filter>코어 파일</Filter>
+      <Filter>게임 코어 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
