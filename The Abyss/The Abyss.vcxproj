@@ -149,7 +149,7 @@
     <ClInclude Include="ConsoleOption.h" />
     <ClInclude Include="ConsoleText.h" />
     <ClInclude Include="ConsoleTextBox.h" />
-    <ClInclude Include="EqupItem.h" />
+    <ClInclude Include="EquipItem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IntroScene.h" />
     <ClInclude Include="Item.h" />
@@ -168,7 +168,7 @@
     <ClCompile Include="ConsoleOption.cpp" />
     <ClCompile Include="ConsoleText.cpp" />
     <ClCompile Include="ConsoleTextBox.cpp" />
-    <ClCompile Include="EqupItem.cpp" />
+    <ClCompile Include="EquipItem.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="Item.cpp" />
