@@ -20,9 +20,11 @@ public:
 
 	EquipType GetEquipType() { return this->equipType; };
 	std::shared_ptr<Status> GetProperty() { return this->property; };
+	int GetDefensivePower() { return this->defensivePower; };
 
 private:
 	EquipType equipType;
 	std::shared_ptr<Status> property;
+	int defensivePower;
 };
 
