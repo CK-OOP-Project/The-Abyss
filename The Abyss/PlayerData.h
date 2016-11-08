@@ -1,13 +1,13 @@
 #pragma once
 #include "stdafx.h"
-#include "Stat.h"
+#include "Status.h"
 class PlayerData
 {
-	std::shared_ptr<Stat> stat;
+	std::shared_ptr<Status> status;
 public:
 	PlayerData();
 	~PlayerData();
 
-	std::shared_ptr<Stat> GetStat() { return stat; };
+	std::shared_ptr<Status> GetStatus() { return status; };
 };
 

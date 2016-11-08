@@ -12,9 +12,13 @@ enum class EquipType
 class EquipItem :
 	public Item
 {
-	
 public:
 	EquipItem(std::shared_ptr<std::string> name);
 	virtual ~EquipItem();
+
+	EquipType GetEquipType() { return this->equipType; };
+
+private:
+	EquipType equipType;
 };
 

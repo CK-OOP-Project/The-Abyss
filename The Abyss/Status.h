@@ -1,13 +1,13 @@
 #pragma once
-class Stat
+class Status
 {
 	int strength;
 	int intelligence;
 	int dexterity;
 	int constitution;
 public:
-	Stat();
-	~Stat();
+	Status();
+	~Status();
 	
 	int GetStrength() { return strength; };
 	int GetIntelligence() { return intelligence; };

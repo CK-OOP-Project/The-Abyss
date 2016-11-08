@@ -75,13 +75,13 @@
     <ClInclude Include="SceneManager.h">
       <Filter>코어 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Stat.h">
-      <Filter>코어 파일</Filter>
-    </ClInclude>
     <ClInclude Include="AbyssGame.h">
       <Filter>메인 파일</Filter>
     </ClInclude>
     <ClInclude Include="EquipItem.h">
+      <Filter>코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Status.h">
       <Filter>코어 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,13 +128,13 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>코어 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Stat.cpp">
-      <Filter>코어 파일</Filter>
-    </ClCompile>
     <ClCompile Include="AbyssGame.cpp">
       <Filter>메인 파일</Filter>
     </ClCompile>
     <ClCompile Include="EquipItem.cpp">
+      <Filter>코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Status.cpp">
       <Filter>코어 파일</Filter>
     </ClCompile>
   </ItemGroup>
