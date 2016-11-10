@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include "SceneManager.h"
 
 class Game : public std::enable_shared_from_this<Game>

@@ -1,5 +1,5 @@
 #pragma once
-#include "stdafx.h"
+#include <memory>
 class Scene;
 class SceneManager
 {

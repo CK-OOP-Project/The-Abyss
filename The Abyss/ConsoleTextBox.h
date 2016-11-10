@@ -1,6 +1,8 @@
 #pragma once
-#include "stdafx.h"
 #include "ConsoleText.h"
+#include <memory>
+#include <vector>
+#include <string>
 class ConsoleTextBox
 {
 public:
