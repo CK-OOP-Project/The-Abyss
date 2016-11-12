@@ -105,6 +105,9 @@
     <ClInclude Include="Battler.h">
       <Filter>게임 코어 파일</Filter>
     </ClInclude>
+    <ClInclude Include="BattleScene.h">
+      <Filter>씬 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="The Abyss.cpp">
@@ -169,6 +172,9 @@
     </ClCompile>
     <ClCompile Include="Battler.cpp">
       <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleScene.cpp">
+      <Filter>씬 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

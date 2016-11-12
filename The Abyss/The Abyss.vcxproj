@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="AbyssGame.h" />
     <ClInclude Include="Battler.h" />
+    <ClInclude Include="BattleScene.h" />
     <ClInclude Include="ConsoleOption.h" />
     <ClInclude Include="ConsoleText.h" />
     <ClInclude Include="ConsoleTextBox.h" />
@@ -170,6 +171,7 @@
   <ItemGroup>
     <ClCompile Include="AbyssGame.cpp" />
     <ClCompile Include="Battler.cpp" />
+    <ClCompile Include="BattleScene.cpp" />
     <ClCompile Include="ConsoleOption.cpp" />
     <ClCompile Include="ConsoleText.cpp" />
     <ClCompile Include="ConsoleTextBox.cpp" />
