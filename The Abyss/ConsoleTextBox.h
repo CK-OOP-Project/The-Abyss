@@ -1,4 +1,5 @@
 #pragma once
+#include "steamb23console.h"
 #include "ConsoleText.h"
 #include <memory>
 #include <vector>

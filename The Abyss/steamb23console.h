@@ -226,11 +226,11 @@ namespace SteamB23 {
 	{
 	public:
 		ConsoleKeyInfo(ConsoleKey key, TCHAR _char, bool shift, bool alt, bool ctrl);
-		const ConsoleKey Key;
-		const TCHAR Char;
-		const bool Shift;
-		const bool Alt;
-		const bool Ctrl;
+		ConsoleKey Key;
+		TCHAR Char;
+		bool Shift;
+		bool Alt;
+		bool Ctrl;
 	};
 	class Console
 	{

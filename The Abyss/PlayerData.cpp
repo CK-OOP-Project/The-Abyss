@@ -4,6 +4,7 @@
 
 PlayerData::PlayerData()
 {
+	this->status = std::make_shared<Status>();
 }
 
 
@@ -43,7 +44,12 @@ int PlayerData::GetStrikingPower()
 
 int PlayerData::GetDefensivePower()
 {
-	return 0;
+	int result = 0;
+	for (int i = 0; i < 6; i++)
+	{
+		result = this->equipItems[i]->GetDefensivePower();
+	}
+	return result;
 }
 
 int PlayerData::GetAccuracy()

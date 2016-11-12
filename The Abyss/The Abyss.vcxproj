@@ -154,6 +154,8 @@
     <ClInclude Include="IntroScene.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="MainScene.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="PlayerCreateScene.h" />
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
@@ -162,6 +164,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="steamb23console.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UsableItem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AbyssGame.cpp" />
@@ -173,6 +176,8 @@
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="MainScene.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="PlayerCreateScene.cpp" />
     <ClCompile Include="PlayerData.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
@@ -186,6 +191,7 @@
     </ClCompile>
     <ClCompile Include="steamb23console.cpp" />
     <ClCompile Include="The Abyss.cpp" />
+    <ClCompile Include="UsableItem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

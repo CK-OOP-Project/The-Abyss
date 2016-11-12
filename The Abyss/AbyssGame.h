@@ -1,5 +1,5 @@
 #pragma once
-#include "stdafx.h"
+#include <memory>
 #include "Game.h"
 #include "PlayerData.h"
 #include "MainScene.h"

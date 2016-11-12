@@ -93,6 +93,15 @@
     <ClInclude Include="Status.h">
       <Filter>게임 코어 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>게임 코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UsableItem.h">
+      <Filter>게임 코어 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCreateScene.h">
+      <Filter>씬 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="The Abyss.cpp">
@@ -145,6 +154,15 @@
     </ClCompile>
     <ClCompile Include="Status.cpp">
       <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UsableItem.cpp">
+      <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCreateScene.cpp">
+      <Filter>씬 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
