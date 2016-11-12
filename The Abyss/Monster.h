@@ -1,7 +1,8 @@
 #pragma once
 #include <memory>
+#include "Battler.h"
 #include "Status.h"
-class Monster
+class Monster : public Battler
 {
 	std::shared_ptr<Status> status;
 	int defensivePower;
@@ -11,10 +12,10 @@ public:
 
 	std::shared_ptr<Status> GetStatus() { return status; };
 
-	int GetHP();
-	int GetMP();
-	int GetStrikingPower();
-	int GetDefensivePower();
-	int GetAccuracy();
+	virtual int GetHP();
+	virtual int GetMP();
+	virtual int GetStrikingPower();
+	virtual int GetDefensivePower();
+	virtual int GetAccuracy();
 };
 

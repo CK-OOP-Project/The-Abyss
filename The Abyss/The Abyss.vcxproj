@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbyssGame.h" />
+    <ClInclude Include="Battler.h" />
     <ClInclude Include="ConsoleOption.h" />
     <ClInclude Include="ConsoleText.h" />
     <ClInclude Include="ConsoleTextBox.h" />
@@ -168,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AbyssGame.cpp" />
+    <ClCompile Include="Battler.cpp" />
     <ClCompile Include="ConsoleOption.cpp" />
     <ClCompile Include="ConsoleText.cpp" />
     <ClCompile Include="ConsoleTextBox.cpp" />

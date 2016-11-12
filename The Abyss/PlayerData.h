@@ -1,8 +1,9 @@
 #pragma once
 #include <memory>
+#include "Battler.h"
 #include "Status.h"
 #include "EquipItem.h"
-class PlayerData
+class PlayerData : public Battler
 {
 	std::shared_ptr<Status> status;
 	std::shared_ptr<EquipItem> equipItems[6];
@@ -13,15 +14,15 @@ public:
 	std::shared_ptr<Status> GetStatus() { return status; };
 
 	// 체력
-	int GetHP();
+	virtual int GetHP();
 	// 마력
-	int GetMP();
+	virtual int GetMP();
 	// 공격력
-	int GetStrikingPower();
+	virtual int GetStrikingPower();
 	// 방어력
-	int GetDefensivePower();
+	virtual int GetDefensivePower();
 	// 회피율
-	int GetAccuracy();
+	virtual int GetAccuracy();
 
 	std::shared_ptr<EquipItem> GetEquipItem(EquipType equipType) { return equipItems[(int)equipType]; };
 };
