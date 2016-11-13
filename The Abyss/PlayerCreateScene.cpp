@@ -34,4 +34,5 @@ void PlayerCreateScene::PlayerCreate()
 	status->dexterity = rand() % 11 + 10;
 	status->intelligence = rand() % 11 + 10;
 	status->strength = rand() % 11 + 10;
+	std::cout << "Ä³¸¯ÅÍ »ı¼ºµÊ" << std::endl;
 }
