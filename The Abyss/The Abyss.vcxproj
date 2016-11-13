@@ -151,6 +151,7 @@
     <ClInclude Include="ConsoleOption.h" />
     <ClInclude Include="ConsoleText.h" />
     <ClInclude Include="ConsoleTextBox.h" />
+    <ClInclude Include="DungeonScene.h" />
     <ClInclude Include="EquipItem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IntroScene.h" />
@@ -175,6 +176,7 @@
     <ClCompile Include="ConsoleOption.cpp" />
     <ClCompile Include="ConsoleText.cpp" />
     <ClCompile Include="ConsoleTextBox.cpp" />
+    <ClCompile Include="DungeonScene.cpp" />
     <ClCompile Include="EquipItem.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IntroScene.cpp" />
