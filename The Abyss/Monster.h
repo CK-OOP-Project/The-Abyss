@@ -11,6 +11,8 @@ public:
 	virtual ~Monster();
 
 	std::shared_ptr<Status> GetStatus() { return status; };
+	virtual std::shared_ptr<std::string> GetName();
+	virtual std::shared_ptr<std::string> SetName();
 
 	virtual int GetHP();
 	virtual int GetMP();

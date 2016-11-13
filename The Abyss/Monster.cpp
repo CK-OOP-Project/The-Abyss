@@ -11,6 +11,16 @@ Monster::~Monster()
 {
 }
 
+std::shared_ptr<std::string> Monster::GetName()
+{
+	return std::shared_ptr<std::string>();
+}
+
+std::shared_ptr<std::string> Monster::SetName()
+{
+	return std::shared_ptr<std::string>();
+}
+
 int Monster::GetHP()
 {
 	return status->constitution;
