@@ -19,10 +19,13 @@ void PlayerCreateScene::Run()
 	using namespace std;
 	using namespace SteamB23;
 	SteamB23::Console::SetTitle(L"The Abyss - 캐릭터 생성");
+	PlayerCreate();
 }
 
 void PlayerCreateScene::PlayerCreate()
 {
+	std::cout << "캐릭터 생성" << std::endl;
+
 	auto game = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
 
 	auto status = game->GetPlayerData()->GetStatus();

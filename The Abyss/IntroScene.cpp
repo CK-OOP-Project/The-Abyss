@@ -3,6 +3,8 @@
 
 #include "sleep.h"
 
+#include "PlayerCreateScene.h"
+
 
 IntroScene::IntroScene(std::weak_ptr<Game> game)
 	:Scene(game)
@@ -22,6 +24,7 @@ void IntroScene::Run()
 	Console::Clear();
 
 	ShowStory();
+	GetGame()->GetSceneManager()->SetNextScene(std::make_shared<PlayerCreateScene>(GetGame()));
 }
 
 void IntroScene::ShowStory()
