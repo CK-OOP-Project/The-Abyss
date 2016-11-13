@@ -30,5 +30,5 @@ void PlayerCreateScene::PlayerCreate()
 	status->constitution = rand() % 11 + 10;
 	status->dexterity = rand() % 11 + 10;
 	status->intelligence = rand() % 11 + 10;
-	status->strength = rand() % 11 + 10
+	status->strength = rand() % 11 + 10;
 }
