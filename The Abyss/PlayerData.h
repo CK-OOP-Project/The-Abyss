@@ -5,7 +5,7 @@
 #include "EquipItem.h"
 class PlayerData : public Battler
 {
-	std::shared_ptr<Status> status;
+	std::shared_ptr<Status> status = std::make_shared<Status>();
 	std::shared_ptr<EquipItem> equipItems[6];
 public:
 	PlayerData();
