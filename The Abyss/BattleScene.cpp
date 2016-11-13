@@ -31,7 +31,7 @@ void BattleScene::Run()
 
 	switch (battleMenu.GetSelect())
 	{
-	case 0:
+	case 0://back
 		/*sceneManager->SetNextScene(std::make_shared<IntroScene>(GetGame()));
 		return;*/
 	case 1://전투 함수를 실행합니다.
@@ -60,7 +60,7 @@ void BattleScene::Battle()
 	int enemyAMOR = battler2->GetDefensivePower();//적의 방어력을 초기화
 	int ememyACC = battler2->GetAccuracy();//적의 명중률을 초기화
 
-	cout << "<<-= 전투 시작 =-" << endl;//전투 시퀸스 돌입 표시 텍스트
+	cout << "<<-= 전투 시작 =->>" << endl;//전투 시퀸스 돌입 표시 텍스트
 	
 	while (1)
 	{
