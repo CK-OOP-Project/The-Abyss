@@ -53,7 +53,7 @@ void PlayerCreateScene::print()
 	auto status = game->GetPlayerData()->GetStatus();
 	
 	ConsoleText title = ConsoleText(
-		"-=플레이어 능력치=-",
+		"-=플레이어 능력  치=-",
 		30, 2,30,
 	SteamB23::ConsoleColor::Red);
 	title.Present();
