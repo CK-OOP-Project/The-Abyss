@@ -13,6 +13,8 @@ public:
 
 	std::shared_ptr<Status> GetStatus() { return status; };
 
+	virtual std::shared_ptr<std::string> GetName();
+
 	// 체력
 	virtual int GetHP();
 	// 마력

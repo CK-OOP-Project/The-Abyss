@@ -11,6 +11,11 @@ PlayerData::~PlayerData()
 {
 }
 
+std::shared_ptr<std::string> PlayerData::GetName()
+{
+	return std::make_shared<std::string>("플레이어");
+}
+
 int PlayerData::GetHP()
 {
 	int result = this->GetStatus()->constitution;

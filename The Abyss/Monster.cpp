@@ -2,23 +2,12 @@
 #include "Monster.h"
 
 
-Monster::Monster()
+Monster::Monster(std::shared_ptr<std::string> name, std::shared_ptr<Status> status, int defensivePower)
 {
 }
-
 
 Monster::~Monster()
 {
-}
-
-std::shared_ptr<std::string> Monster::GetName()
-{
-	return std::shared_ptr<std::string>();
-}
-
-std::shared_ptr<std::string> Monster::SetName()
-{
-	return std::shared_ptr<std::string>();
 }
 
 int Monster::GetHP()
