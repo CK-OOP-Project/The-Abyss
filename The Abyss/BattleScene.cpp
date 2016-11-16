@@ -1,8 +1,10 @@
 #include "stdafx.h"
 #include "BattleScene.h"
+#include"DungeonScene.h"
 #include "SceneManager.h"
 #include "ConsoleOption.h"
 #include "sleep.h"
+
 BattleScene::BattleScene(std::weak_ptr<Game> game,
 	std::shared_ptr<Battler>battler1,
 	std::shared_ptr<Battler>battler2)
@@ -22,9 +24,11 @@ void BattleScene::Run()
 {
 	using namespace SteamB23;//콘솔옵션 관련 사용자 정의 헤더
 	using namespace std;
+	Console::Clear;
 	ConsoleOption battleMenu = ConsoleOption(
 	{
 		"도 주",
+
 		"전 투",
 	},
 		34, 10,11 );
@@ -74,7 +78,24 @@ void BattleScene::Battle()
 
 		if (enemyHP <= 0)//적이 죽었을때
 		{
-			//씬 호출
+			Console::Clear;
+			cout << "적을 죽였다." << endl << "던전을 계속 진행할까?" << endl;
+
+			ConsoleOption battleMenu = ConsoleOption(
+			{
+				"예",
+
+				"아니오",
+			},
+			34, 10, 11);
+
+			switch (battleMenu.GetSelect())
+			{
+			case 0://던전으로 재진입
+				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
+			case 1://메인메뉴로 탈출
+				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<MainScene>(GetGame()));
+			}
 			//아이템 습득
 		}
 
