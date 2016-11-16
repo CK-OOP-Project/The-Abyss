@@ -25,7 +25,6 @@ void DungeonScene::Run()
 
 
 
-	if (Event == 0)
 		Event = rand() % 2 + 1;
 	if (Event == 2)//아무일도 일어나지 않았다.
 	{
