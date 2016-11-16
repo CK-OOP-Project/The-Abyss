@@ -19,6 +19,11 @@ void MainScene::Run()
 	case 0:
 		sceneManager->SetNextScene(std::make_shared<IntroScene>(GetGame()));
 		return;
+	case 1:
+		break;
+	case 3: 
+		system("exit");
+		return;
 	default:
 		sceneManager->SetNextScene(sceneManager->GetCurrentScene());
 	}
