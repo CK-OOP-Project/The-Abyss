@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "GameoverScene.h"
 #include "MainScene.h"
-
-
+#include"sleep.h"
+#include"ConsoleTextBox.h"
 GameoverScene::GameoverScene(std::weak_ptr<Game> game)
 	:Scene(game)
 {
@@ -17,7 +17,15 @@ void GameoverScene::Run()
 	USING;
 	Console::Clear();
 	Console::SetTitle(TEXT("The Abyss - 게임오버"));
-	cout << "당신은 사망했습니다." << endl;
+	ConsoleTextBox youdie = ConsoleTextBox({
+		"당신은 죽었습니다.",
+
+		"     축하합니다.",
+	},
+		34, 10, 11,
+	SteamB23::ConsoleColor::DarkMagenta);
+		
+	
 	SkipableSleep(2000);
 	GetGame()->GetSceneManager()->SetNextScene(std::make_shared<MainScene>(GetGame()));
 }

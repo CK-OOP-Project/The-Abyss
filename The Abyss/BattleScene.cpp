@@ -36,7 +36,7 @@ void BattleScene::Run()
 	switch (battleMenu.GetSelect())
 	{
 	case 0://back
-		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+		GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
 		break;
 	case 1://전투 함수를 실행합니다.
 		Battle();
@@ -93,7 +93,7 @@ void BattleScene::Battle()
 			switch (battleMenu.GetSelect())
 			{
 			case 0://던전으로 재진입
-				GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
 			case 1://메인메뉴로 탈출
 				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<MainScene>(GetGame()));
 			}
