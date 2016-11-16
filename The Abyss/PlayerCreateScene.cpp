@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "PlayerCreateScene.h"
+#include "DungeonScene.h"
 #include "AbyssGame.h"
 
 #include "sleep.h"
@@ -42,6 +43,8 @@ void PlayerCreateScene::PlayerCreate()
 	using namespace std;
 	SkipableSleep(8000);
 	print();
+	SkipableSleep(8000);
+	GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
 }
 
 void PlayerCreateScene::print()
@@ -53,7 +56,7 @@ void PlayerCreateScene::print()
 	auto status = game->GetPlayerData()->GetStatus();
 	
 	ConsoleText title = ConsoleText(
-		"-=플레이어 능력  치=-",
+		"-=플레이어 능력치=-",
 		30, 2,30,
 	SteamB23::ConsoleColor::Red);
 	title.Present();
@@ -91,5 +94,8 @@ void PlayerCreateScene::print()
 		SteamB23::ConsoleColor::Red);
 	strength.Present();
 	std::cout << status->strength << std::endl;//힘
+
+
+
 
 }
