@@ -13,7 +13,6 @@ class MainScene :
 	ConsoleOption mainMenu = ConsoleOption(
 	{
 		"새 게임",
-		"불러오기",
 		"크레딧",
 		"종료"
 	},
