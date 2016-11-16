@@ -24,7 +24,6 @@ void BattleScene::Run()
 {
 	using namespace SteamB23;//콘솔옵션 관련 사용자 정의 헤더
 	using namespace std;
-	Console::Clear();
 	ConsoleOption battleMenu = ConsoleOption(
 	{
 		"도 주",
@@ -36,7 +35,7 @@ void BattleScene::Run()
 	switch (battleMenu.GetSelect())
 	{
 	case 0://back
-		GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
+		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		break;
 	case 1://전투 함수를 실행합니다.
 		Battle();
@@ -71,8 +70,6 @@ void BattleScene::Battle()
 	
 	while (1)
 	{
-
-
 		int Damage;//피해량 
 		Damage = (playerATT - (enemyAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);//피해량 공식
 
@@ -96,11 +93,13 @@ void BattleScene::Battle()
 			switch (battleMenu.GetSelect())
 			{
 			case 0://던전으로 재진입
-				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
-		
+				GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+				break;
 			case 1://메인메뉴로 탈출
 				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<MainScene>(GetGame()));
+				break;
 			}
+			break;
 			//아이템 습득
 		}
 
@@ -116,6 +115,7 @@ void BattleScene::Battle()
 		{
 			//씬 호출
 			//레코드 
+			break;
 		}
 	}
 }
