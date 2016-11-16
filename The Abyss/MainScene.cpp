@@ -10,6 +10,7 @@ MainScene::MainScene(std::weak_ptr<Game> game)
 
 void MainScene::Run()
 {
+	SteamB23::Console::Clear();
 	SteamB23::Console::SetTitle(TEXT("The Abyss"));
 	SceneManager* sceneManager = GetGame()->GetSceneManager();
 	title.Present();

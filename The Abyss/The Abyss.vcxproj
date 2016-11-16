@@ -154,6 +154,7 @@
     <ClInclude Include="DungeonScene.h" />
     <ClInclude Include="EquipItem.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameoverScene.h" />
     <ClInclude Include="IntroScene.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="MainScene.h" />
@@ -180,6 +181,7 @@
     <ClCompile Include="DungeonScene.cpp" />
     <ClCompile Include="EquipItem.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameoverScene.cpp" />
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="MainScene.cpp" />

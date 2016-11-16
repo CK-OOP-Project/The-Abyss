@@ -5,6 +5,7 @@
 AbyssGame::AbyssGame()
 {
 	playerData = std::make_shared<PlayerData>();
+	srand((UINT)time(0));
 }
 
 

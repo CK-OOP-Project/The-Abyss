@@ -1,4 +1,7 @@
 #pragma once
+
+#define USING using namespace std; using namespace SteamB23;
+
 #include "Game.h"
 #include <memory>
 class Scene : public std::enable_shared_from_this<Scene>
@@ -12,4 +15,3 @@ public:
 private:
 	std::weak_ptr<Game> game;
 };
-
