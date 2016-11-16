@@ -37,8 +37,10 @@ void BattleScene::Run()
 	{
 	case 0://back
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+		break;
 	case 1://전투 함수를 실행합니다.
 		Battle();
+		break;
 	}
 	//플레이어 스탯 값 초기화 (맥스)
 
