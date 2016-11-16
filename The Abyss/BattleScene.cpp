@@ -24,7 +24,7 @@ void BattleScene::Run()
 {
 	using namespace SteamB23;//콘솔옵션 관련 사용자 정의 헤더
 	using namespace std;
-	Console::Clear;
+	Console::Clear();
 	ConsoleOption battleMenu = ConsoleOption(
 	{
 		"도 주",
@@ -48,6 +48,8 @@ void BattleScene::Run()
 
 void BattleScene::Battle()
 {
+	USING;
+	Console::Clear();
 	using namespace SteamB23;//콘솔옵션 관련 사용자 정의 헤더
 	using namespace std;
 
@@ -69,17 +71,18 @@ void BattleScene::Battle()
 	
 	while (1)
 	{
-		
-		if (playerHP <= 0)//플레이어가 죽었을때
-		{
-			//씬 호출
-		    //레코드 
-		}
 
+
+		int Damage;//피해량 
+		Damage = (playerATT - (enemyAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);//피해량 공식
+
+		enemyHP = enemyHP - Damage;
+		cout << "적을 공격했다. 데미지 [" << Damage << "] 를 입혔다." << endl;
+		SkipableSleep(2000);
+		cout << "적의 체력이 [" << enemyHP << "] 남았다." << endl;
 
 		if (enemyHP <= 0)//적이 죽었을때
 		{
-			Console::Clear;
 			cout << "적을 죽였다." << endl << "던전을 계속 진행할까?" << endl;
 
 			ConsoleOption battleMenu = ConsoleOption(
@@ -88,36 +91,33 @@ void BattleScene::Battle()
 
 				"아니오",
 			},
-			34, 10, 11);
+				34, 20, 11);
 
 			switch (battleMenu.GetSelect())
 			{
 			case 0://던전으로 재진입
 				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
+		
 			case 1://메인메뉴로 탈출
 				GetGame()->GetSceneManager()->SetNextScene(std::make_shared<MainScene>(GetGame()));
 			}
 			//아이템 습득
 		}
 
-
-		int Damage;//피해량 
-		Damage = (playerATT - (enemyAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);//피해량 공식
-
-			enemyHP = enemyHP - Damage;
-			cout << "적을 공격했다. 데미지 [" << Damage << "] 를 입혔다." << endl;
-		    SkipableSleep(2000);
-			cout << "적의 체력이 [" << enemyHP << "] 남았다." << endl;
-        
-	
 		Damage = (enemyATT - (playerAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);
 
-		    playerHP = playerHP - Damage;
-		    cout << "적의 공격을 받았다. 데미지 [" << Damage << "] 를 입혔다." << endl;
-			SkipableSleep(2000);
-			cout << "나의 체력이 [" << playerHP << "] 남았다." << endl;
-	}     
+		playerHP = playerHP - Damage;
+		cout << "적의 공격을 받았다. 데미지 [" << Damage << "] 를 입혔다." << endl;
+		SkipableSleep(2000);
+		cout << "나의 체력이 [" << playerHP << "] 남았다." << endl;
 
+
+		if (playerHP <= 0)//플레이어가 죽었을때
+		{
+			//씬 호출
+			//레코드 
+		}
+	}
 }
 
 void BattleScene::ItemGet()
