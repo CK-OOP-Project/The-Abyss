@@ -73,8 +73,20 @@ void BattleScene::Battle()
 
 	cout << "<<-= 전투 시작 =->>" << endl;//전투 시퀸스 돌입 표시 텍스트
 	
+
+	int textRand = rand() % 10;
+
+	switch (textRand) {
+	case 0:
+
+	}
+
+	cout << *enemy << " 은(는) 체력이 [" << enemyHP << "] 있다." << endl;
+
 	while (1)
 	{
+		
+
 		int Damage;//피해량 
 		
 		Damage = (playerATT - (enemyAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);//피해량 공식
