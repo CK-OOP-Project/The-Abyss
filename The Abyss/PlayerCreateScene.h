@@ -6,8 +6,9 @@ class PlayerCreateScene :
 public:
 	PlayerCreateScene(std::weak_ptr<Game> game);
 	virtual ~PlayerCreateScene();
-
+	
 	virtual void Run();
 	void PlayerCreate();
+	void print();
 };
 
