@@ -7,7 +7,9 @@ class BattleScene :
 {
 
 public:
-	BattleScene(std::weak_ptr<Game> game,std::shared_ptr<Battler>battler1,std::shared_ptr<Battler>battler2);
+	BattleScene(std::weak_ptr<Game> game, 
+		std::shared_ptr<Battler>battler1, 
+		std::shared_ptr<Battler>battler2);
 	virtual ~BattleScene();
 	virtual void Run();
 	void Battle(); 
