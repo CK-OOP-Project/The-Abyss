@@ -70,5 +70,12 @@ void DungeonScene::Run()
 
 }
 
+std::shared_ptr<DungeonScene> DungeonScene::GetInstance(std::shared_ptr<Game> game)
+{
+	if (instance == nullptr)
+		instance = std::make_shared<DungeonScene>(game);
+	return instance;
+}
 
 
+std::shared_ptr<DungeonScene> DungeonScene::instance;

@@ -14,9 +14,13 @@ public:
 	virtual ~DungeonScene();
 
 	virtual void Run();
+
+	static std::shared_ptr<DungeonScene> GetInstance(std::shared_ptr<Game> game = 0);
 private:
 	int Floor;//층
 	int Event;//던전에서의 상황
 	bool endFloor;//다음 층으로 넘어가기 전 이번층의 끝을 알리는 값
+
+	static std::shared_ptr<DungeonScene> instance;
 };
 

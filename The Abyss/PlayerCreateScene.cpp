@@ -44,7 +44,7 @@ void PlayerCreateScene::PlayerCreate()
 	SkipableSleep(8000);
 	print();
 	SkipableSleep(8000);
-	GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
+	GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 }
 
 void PlayerCreateScene::print()
