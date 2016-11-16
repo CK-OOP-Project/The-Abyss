@@ -69,22 +69,24 @@ void BattleScene::Battle()
 	int enemyATT = battler2->GetStrikingPower();//적의 공격력을 초기화
 	int enemyAMOR = battler2->GetDefensivePower();//적의 방어력을 초기화
 	int ememyACC = battler2->GetAccuracy();//적의 명중률을 초기화
+	shared_ptr<std::string> enemy = battler2->GetName();//적이름 가지고오기
 
 	cout << "<<-= 전투 시작 =->>" << endl;//전투 시퀸스 돌입 표시 텍스트
 	
 	while (1)
 	{
 		int Damage;//피해량 
+		
 		Damage = (playerATT - (enemyAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);//피해량 공식
 
 		enemyHP = enemyHP - Damage;
-		cout << "적을 공격했다. 데미지 [" << Damage << "] 를 입혔다." << endl;
+		cout << *enemy << " 을(를) 공격했다. 데미지 [" << Damage << "] 를 입혔다." << endl;
 		SkipableSleep(2000);
-		cout << "적의 체력이 [" << enemyHP << "] 남았다." << endl;
+		cout << *enemy << " 의 체력이 [" << enemyHP << "] 남았다." << endl;
 
 		if (enemyHP <= 0)//적이 죽었을때
 		{
-			cout << "적을 죽였다." << endl << "던전을 계속 진행할까?" << endl;
+			cout <<*enemy<< " 을(를) 죽였다." << endl << "던전을 계속 진행할까?" << endl;
 
 			ConsoleOption battleMenu = ConsoleOption(
 			{
@@ -110,7 +112,7 @@ void BattleScene::Battle()
 		Damage = (enemyATT - (playerAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);
 
 		playerHP = playerHP - Damage;
-		cout << "적의 공격을 받았다. 데미지 [" << Damage << "] 를 입었다." << endl;
+		cout << *enemy << " 의 공격을 받았다. 데미지 [" << Damage << "] 를 입었다." << endl;
 		SkipableSleep(2000);
 		cout << "나의 체력이 [" << playerHP << "] 남았다." << endl;
 

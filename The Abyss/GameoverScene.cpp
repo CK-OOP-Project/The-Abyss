@@ -18,13 +18,13 @@ void GameoverScene::Run()
 	Console::Clear();
 	Console::SetTitle(TEXT("The Abyss - 게임오버"));
 	ConsoleTextBox youdie = ConsoleTextBox({
-		"당신은 죽었습니다.",
+	"당신은 죽었습니다.","   ",
 
-		"     축하합니다.",
+	"    축하합니다.",
 	},
-		34, 10, 11,
+		34, 10, 20,
 	SteamB23::ConsoleColor::DarkMagenta);
-		
+	youdie.Present();
 	
 	SkipableSleep(2000);
 	GetGame()->GetSceneManager()->SetNextScene(std::make_shared<MainScene>(GetGame()));
