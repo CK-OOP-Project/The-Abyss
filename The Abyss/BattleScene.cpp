@@ -75,14 +75,44 @@ void BattleScene::Battle()
 	
 
 	int textRand = rand() % 10;
+	SteamB23::Console::SetForegroundColor(ConsoleColor::Red);
 
 	switch (textRand) {
 	case 0:
+		cout << *enemy << "이(가) 크게 울부 짖었다." << endl;
+			break;
+	case 1:
+		cout << *enemy << "이(가) 사랑스러운 눈빛으로 나를 바라본다.." << endl;
+		break;
+	case 2:
+		cout << *enemy << "이(가) 굶주려하며 입맛을 다신다.." << endl;
+		break;
+	case 3:
+		cout << *enemy << "이(가) 벌벌 떨며 나를 보고 겁먹고 있다." << endl;
+		break;
+	case 4:
+		cout << *enemy << "이(가) 나에게 친근하게 다가온다." << endl;
+		break;
+	case 5:
+		cout << *enemy << "이(가) 쿨쿨 잠들어있다." << endl;
+		break;
+	case 6:
+		cout << *enemy << "이(가) 무시 하고 있다." << endl;
+		break;
+	case 7:
+		cout << *enemy << "이(가) 크게 울부 짖었다." << endl;
+		break;
+	case 8:
+		cout << *enemy << "이(가) 혼란한 모습으로 섹시하게 유혹하고있다.." << endl;
+		break;
+	case 9:
+		cout << *enemy << "이(가) 무서운 모습으로 쿵쾅거리며 춤을 추고있다." << endl;
+		break;
 
 	}
-
+	Console::ResetColor();
 	cout << *enemy << " 은(는) 체력이 [" << enemyHP << "] 있다." << endl;
-
+	SkipableSleep(8000);
 	while (1)
 	{
 		
@@ -93,8 +123,9 @@ void BattleScene::Battle()
 
 		enemyHP = enemyHP - Damage;
 		cout << *enemy << " 을(를) 공격했다. 데미지 [" << Damage << "] 를 입혔다." << endl;
-		SkipableSleep(2000);
+		SkipableSleep(8000);
 		cout << *enemy << " 의 체력이 [" << enemyHP << "] 남았다." << endl;
+		SkipableSleep(8000);
 
 		if (enemyHP <= 0)//적이 죽었을때
 		{
@@ -125,9 +156,9 @@ void BattleScene::Battle()
 
 		playerHP = playerHP - Damage;
 		cout << *enemy << " 의 공격을 받았다. 데미지 [" << Damage << "] 를 입었다." << endl;
-		SkipableSleep(2000);
+		SkipableSleep(8000);
 		cout << "나의 체력이 [" << playerHP << "] 남았다." << endl;
-
+		SkipableSleep(8000);
 
 		if (playerHP <= 0)//플레이어가 죽었을때
 		{
