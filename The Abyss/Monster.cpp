@@ -3,6 +3,7 @@
 
 
 Monster::Monster(std::shared_ptr<std::string> name, std::shared_ptr<Status> status, int defensivePower)
+	: name(name),status(status),defensivePower(defensivePower)
 {
 }
 
