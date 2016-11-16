@@ -18,6 +18,7 @@ void PlayerCreateScene::Run()
 {
 	using namespace std;
 	using namespace SteamB23;
+	SteamB23::Console::Clear();
 	SteamB23::Console::SetTitle(L"The Abyss - 캐릭터 생성");
 	PlayerCreate();
 }
