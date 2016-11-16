@@ -9,7 +9,7 @@ std::shared_ptr<Monster> MonsterManager::GetMonster(int level)
 	monster = std::make_shared<Monster>(
 		std::make_shared<std::string>("ÇØ°ñ º´»ç"),
 		//(int strength, int intelligence, int dexterity, int constitution)
-		std::make_shared<Status>(5, 5, 5, 5),
+		std::make_shared<Status>(85, 85, 85, 85),
 		0);
 /*
 	std::make_shared<Monster>(

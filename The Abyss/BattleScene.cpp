@@ -1,7 +1,11 @@
 #include "stdafx.h"
+
 #include "BattleScene.h"
+//연결된 씬 파일
 #include"DungeonScene.h"
 #include "SceneManager.h"
+#include"GameoverScene.h"
+
 #include "ConsoleOption.h"
 #include "sleep.h"
 
@@ -106,7 +110,7 @@ void BattleScene::Battle()
 		Damage = (enemyATT - (playerAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);
 
 		playerHP = playerHP - Damage;
-		cout << "적의 공격을 받았다. 데미지 [" << Damage << "] 를 입혔다." << endl;
+		cout << "적의 공격을 받았다. 데미지 [" << Damage << "] 를 입었다." << endl;
 		SkipableSleep(2000);
 		cout << "나의 체력이 [" << playerHP << "] 남았다." << endl;
 
@@ -114,6 +118,7 @@ void BattleScene::Battle()
 		if (playerHP <= 0)//플레이어가 죽었을때
 		{
 			//씬 호출
+			GetGame()->GetSceneManager()->SetNextScene(std::make_shared<GameoverScene>(GetGame()));
 			//레코드 
 			break;
 		}
