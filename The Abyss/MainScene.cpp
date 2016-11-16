@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MainScene.h"
 #include "IntroScene.h"
+#include "CreditScene.h"
 
 
 MainScene::MainScene(std::weak_ptr<Game> game)
@@ -20,9 +21,10 @@ void MainScene::Run()
 		sceneManager->SetNextScene(std::make_shared<IntroScene>(GetGame()));
 		return;
 	case 1:
-		break;
-	case 3: 
-		system("exit");
+		sceneManager->SetNextScene(std::make_shared<CreditScene>(GetGame()));
+		return;
+	case 2:
+		// Á¾·á
 		return;
 	default:
 		sceneManager->SetNextScene(sceneManager->GetCurrentScene());
