@@ -1,7 +1,7 @@
 #pragma once
 #include "Game.h"
 #include <memory>
-class Scene
+class Scene : public std::enable_shared_from_this<Scene>
 {
 public:
 	Scene(std::weak_ptr<Game> game);
