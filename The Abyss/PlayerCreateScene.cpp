@@ -38,6 +38,7 @@ void PlayerCreateScene::PlayerCreate()
 	status->dexterity = rand() % 11 + 10;
 	status->intelligence = rand() % 11 + 10;
 	status->strength = rand() % 11 + 10;
+	game->GetPlayerData()->SetCurrentHP(INT32_MAX);
 	std::cout << "캐릭터 생성됨" << std::endl;
 	
 	using namespace std;

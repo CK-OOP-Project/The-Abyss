@@ -66,3 +66,17 @@ int PlayerData::GetAccuracy()
 	//}
 	return result;
 }
+
+int PlayerData::GetCurrentHP()
+{
+	if (currentHP > GetHP())
+		currentHP = GetHP();
+	return currentHP;
+}
+
+void PlayerData::SetCurrentHP(int value)
+{
+	if (value > GetHP())
+		value = GetHP();
+	currentHP = value;
+}
