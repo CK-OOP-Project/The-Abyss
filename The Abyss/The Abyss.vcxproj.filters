@@ -116,6 +116,9 @@
     <ClInclude Include="CreditScene.h">
       <Filter>씬 파일</Filter>
     </ClInclude>
+    <ClInclude Include="EventScene.h">
+      <Filter>씬 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="The Abyss.cpp">
@@ -194,6 +197,9 @@
       <Filter>씬 파일</Filter>
     </ClCompile>
     <ClCompile Include="CreditScene.cpp">
+      <Filter>씬 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EventScene.cpp">
       <Filter>씬 파일</Filter>
     </ClCompile>
   </ItemGroup>
