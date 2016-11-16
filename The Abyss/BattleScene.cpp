@@ -36,8 +36,7 @@ void BattleScene::Run()
 	switch (battleMenu.GetSelect())
 	{
 	case 0://back
-		/*sceneManager->SetNextScene(std::make_shared<IntroScene>(GetGame()));
-		return;*/
+		GetGame()->GetSceneManager()->SetNextScene(std::make_shared<DungeonScene>(GetGame()));
 	case 1://전투 함수를 실행합니다.
 		Battle();
 	}
