@@ -4,6 +4,7 @@
 
 AbyssGame::AbyssGame()
 {
+	playerData = std::make_shared<PlayerData>();
 }
 
 

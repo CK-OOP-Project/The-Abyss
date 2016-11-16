@@ -5,7 +5,7 @@
 #include "EquipItem.h"
 class PlayerData : public Battler
 {
-	std::shared_ptr<Status> status = std::make_shared<Status>();
+	std::shared_ptr<Status> status;
 	std::shared_ptr<EquipItem> equipItems[6];
 public:
 	PlayerData();
@@ -14,6 +14,8 @@ public:
 	std::shared_ptr<Status> GetStatus() { return status; };
 
 	virtual std::shared_ptr<std::string> GetName();
+	// 아무것도 안하는 놈
+	virtual void SetName(std::shared_ptr<std::string> value) {};
 
 	// 체력
 	virtual int GetHP();

@@ -4,6 +4,7 @@
 
 PlayerData::PlayerData()
 {
+	status = std::make_shared<Status>();
 }
 
 
