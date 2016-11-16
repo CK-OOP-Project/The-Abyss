@@ -35,3 +35,18 @@ int Monster::GetAccuracy()
 {
 	return status->dexterity;
 }
+
+
+int Monster::GetCurrentHP()
+{
+	if (currentHP > GetHP())
+		currentHP = GetHP();
+	return currentHP;
+}
+
+void Monster::SetCurrentHP(int value)
+{
+	if (value > GetHP())
+		value = GetHP();
+	currentHP = value;
+}

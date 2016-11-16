@@ -10,5 +10,8 @@ public:
 	virtual int GetStrikingPower() = 0;
 	virtual int GetDefensivePower() = 0;
 	virtual int GetAccuracy() = 0;
+
+	virtual int GetCurrentHP() = 0;
+	virtual void SetCurrentHP(int value) = 0;
 };
 

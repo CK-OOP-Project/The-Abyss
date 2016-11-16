@@ -28,8 +28,8 @@ public:
 	// È¸ÇÇÀ²
 	virtual int GetAccuracy();
 
-	int GetCurrentHP();
-	void SetCurrentHP(int value);
+	virtual int GetCurrentHP();
+	virtual void SetCurrentHP(int value);
 
 	std::shared_ptr<EquipItem> GetEquipItem(EquipType equipType) { return equipItems[(int)equipType]; };
 private:

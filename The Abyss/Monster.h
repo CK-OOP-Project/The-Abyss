@@ -17,9 +17,13 @@ public:
 	virtual int GetStrikingPower();
 	virtual int GetDefensivePower();
 	virtual int GetAccuracy();
+
+	virtual int GetCurrentHP();
+	virtual void SetCurrentHP(int value);
 private:
 	std::shared_ptr<std::string> name;
 	std::shared_ptr<Status> status;
 	int defensivePower;
+	int currentHP;
 };
 
