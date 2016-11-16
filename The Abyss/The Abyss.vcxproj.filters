@@ -110,6 +110,9 @@
     <ClInclude Include="MonsterManager.h">
       <Filter>게임 코어 파일</Filter>
     </ClInclude>
+    <ClInclude Include="GameoverScene.h">
+      <Filter>씬 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="The Abyss.cpp">
@@ -183,6 +186,9 @@
     </ClCompile>
     <ClCompile Include="MonsterManager.cpp">
       <Filter>게임 코어 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameoverScene.cpp">
+      <Filter>씬 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
