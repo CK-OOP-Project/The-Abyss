@@ -130,6 +130,7 @@ void BattleScene::Battle()
 
 		if (enemyHP <= 0)//적이 죽었을때
 		{
+			Console::Clear();
 			cout <<*enemy<< " 을(를) 죽였다." << endl << "던전을 계속 진행할까?" << endl;
 
 			ConsoleOption battleMenu = ConsoleOption(
