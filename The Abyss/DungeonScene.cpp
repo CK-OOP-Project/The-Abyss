@@ -16,14 +16,48 @@ DungeonScene::~DungeonScene()
 
 }
 
+void DungeonScene::printStatus()
+{
+	using namespace SteamB23;
+
+	auto game = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
+	auto status = game->GetPlayerData()->GetStatus();
+
+	int maxHp = status->constitution;//최대채력
+	char maxHpStr[30];
+	int strength = status->strength;//힘 
+	char StrengthStr[30];
+
+	auto abyssGame = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
+	auto playerdata = abyssGame->GetPlayerData();
+
+	int currHp = playerdata->GetCurrentHP();//현재 hp
+
+	int attack = playerdata->GetStrikingPower();//공격력
+	char attackStr[30];
+
+
+	wsprintfA(attackStr, "공격력 ::      %d", attack);
+	wsprintfA(maxHpStr, "체력   :: %d / %d", currHp, maxHp);
+	wsprintfA(StrengthStr, "힘     ::      %d", strength);
+
+	ConsoleTextBox inventory = ConsoleTextBox({
+		maxHpStr,attackStr,StrengthStr,
+
+	},
+		80 - 20, 0, 20,
+		SteamB23::ConsoleColor::DarkMagenta);
+	inventory.Present();
+
+}
+
 void DungeonScene::Run()
 {
 	using namespace SteamB23;
 	Console::Clear();
+
 	auto game = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
 	std::cout << "던전 " << Floor << "층 이다." << std::endl;
-
-
 
 		Event = rand() % 2 + 1;
 	if (Event == 2)//아무일도 일어나지 않았다.
@@ -31,6 +65,7 @@ void DungeonScene::Run()
 		Console::Clear;
 		std::cout << "아무 일도 일어나지 않았습니다." << std::endl << "무엇을 하시겠습니까?";
 		int A;
+		printStatus();
 		ConsoleOption battleMenu = ConsoleOption(
 		{
 			"내려가기",
@@ -66,7 +101,7 @@ void DungeonScene::Run()
 		GetGame()->GetSceneManager()->SetNextScene(battleScene);
 	
 	}
-
+	printStatus();
 
 }
 

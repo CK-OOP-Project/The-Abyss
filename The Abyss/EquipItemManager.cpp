@@ -18,4 +18,5 @@ std::shared_ptr<EquipItem> EquipItemManager::GetItem(int level)
 			0);
 		break;
 	}
+	return item;
 }
