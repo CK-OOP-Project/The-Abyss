@@ -15,7 +15,7 @@ class EquipItem :
 	public Item
 {
 public:
-	EquipItem(std::shared_ptr<std::string> name, std::shared_ptr<Status> property, int defensivePower);
+	EquipItem(std::shared_ptr<std::string> name, std::shared_ptr<Status> property, int defensivePower, EquipType equipType);
 	virtual ~EquipItem();
 
 	EquipType GetEquipType() { return this->equipType; };
