@@ -10,5 +10,8 @@ public:
 
 	virtual void Run();
 
+private:
+	int EventRand;
+	int	GameTimeRand;
 };
 
