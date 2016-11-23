@@ -9,6 +9,7 @@
 #include "ConsoleOption.h"
 #include "sleep.h"
 
+
 BattleScene::BattleScene(std::weak_ptr<Game> game,
 	std::shared_ptr<Battler>battler1,
 	std::shared_ptr<Battler>battler2)

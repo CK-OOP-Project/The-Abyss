@@ -3,6 +3,7 @@
 #include<memory>
 #include "Scene.h"
 #include "MonsterManager.h"
+#include "EquipItem.h"
 
 DungeonScene::DungeonScene(std::weak_ptr<Game> game) : Scene(game)
 {
@@ -19,7 +20,11 @@ DungeonScene::~DungeonScene()
 void DungeonScene::printStatus()
 {
 	using namespace SteamB23;
-
+	std::shared_ptr<std::string>headitemName;//string 타입의 스마트포인터 변수 선언
+	std::shared_ptr<std::string>bodyitemName;
+	std::shared_ptr<std::string>weaponitemName;
+		
+		
 	auto game = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
 	auto status = game->GetPlayerData()->GetStatus();
 
@@ -29,9 +34,34 @@ void DungeonScene::printStatus()
 	char StrengthStr[30];
 
 	auto abyssGame = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
-	auto playerdata = abyssGame->GetPlayerData();
+	auto playerdata = abyssGame->GetPlayerData();//플레이어 데이터 가져오기
+   
+	std::shared_ptr< EquipItem> head= playerdata->GetEquipItem(EquipType::Head);
+	std::shared_ptr< EquipItem> body = playerdata->GetEquipItem(EquipType::Body);
+	std::shared_ptr< EquipItem> weapon = playerdata->GetEquipItem(EquipType::Weapon);
+ 
+	//머리 장비 이름
+	if(head != nullptr)
+    headitemName = head->GetName();
+	else headitemName = std::make_shared<std::string>("없다.");
+	char headequip[30];
+
+	//무기 장비 이름
+	if (weapon != nullptr)
+	weaponitemName = weapon->GetName();
+	else weaponitemName = std::make_shared<std::string>("없다.");
+	char  weaponequip[30];
+
+	//몸통방비 이름
+	if(body != nullptr)
+	bodyitemName = body->GetName();
+	else bodyitemName = std::make_shared<std::string>("없다.");
+	char bodyequip[30];
 
 	int currHp = playerdata->GetCurrentHP();//현재 hp
+	
+
+	
 
 	int attack = playerdata->GetStrikingPower();//공격력
 	char attackStr[30];
@@ -40,12 +70,14 @@ void DungeonScene::printStatus()
 	wsprintfA(attackStr, "공격력 ::      %d", attack);
 	wsprintfA(maxHpStr, "체력   :: %d / %d", currHp, maxHp);
 	wsprintfA(StrengthStr, "힘     ::      %d", strength);
-
+	wsprintfA(bodyequip, "몸통   ::      %s", *bodyitemName);
+	wsprintfA(weaponequip, "무기   ::      %s", *weaponequip);
+	wsprintfA(headequip, "머리   ::      %s", *headequip);
 	ConsoleTextBox inventory = ConsoleTextBox({
-		maxHpStr,attackStr,StrengthStr,
+		maxHpStr,attackStr,StrengthStr,"-----------------",bodyequip,weaponequip,headequip,
 
 	},
-		80 - 20, 0, 20,
+		80 - 30, 0, 30,
 		SteamB23::ConsoleColor::DarkMagenta);
 	inventory.Present();
 
