@@ -22,7 +22,7 @@ void EventScene::Run()
 	{
 	case 1:
 	{
-		std::cout << "윤석현교수님(을)를 발견하였습니다." <<
+		std::cout << "작은돌맹이를 발견하였습니다." <<
 			std::endl << "아무 쓸모 없어보인다..";
 	}break;
 	case 2:
