@@ -32,6 +32,7 @@ public:
 	virtual void SetCurrentHP(int value);
 
 	std::shared_ptr<EquipItem> GetEquipItem(EquipType equipType) { return equipItems[(int)equipType]; };
+	void SetEquipItem(EquipType equipType, std::shared_ptr<EquipItem> value) { equipItems[(int)equipType] == value; };
 private:
 	int currentHP;
 };
