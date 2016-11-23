@@ -11,6 +11,11 @@ MainScene::MainScene(std::weak_ptr<Game> game)
 
 void MainScene::Run()
 {
+	// 버퍼 날리기
+	while (SteamB23::Console::GetKeyAvailable())
+	{
+		SteamB23::Console::ReadKey();
+	}
 	SteamB23::Console::Clear();
 	SteamB23::Console::SetTitle(TEXT("The Abyss"));
 	SceneManager* sceneManager = GetGame()->GetSceneManager();

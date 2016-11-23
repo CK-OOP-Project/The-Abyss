@@ -12,7 +12,7 @@ class DungeonScene :
 public:
 	DungeonScene(std::weak_ptr<Game> game);
 	virtual ~DungeonScene();
-
+	void printStatus();
 	virtual void Run();
 
 	static std::shared_ptr<DungeonScene> GetInstance(std::shared_ptr<Game> game = 0);

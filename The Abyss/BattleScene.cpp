@@ -57,7 +57,7 @@ void BattleScene::Battle()
 	using namespace std;
 
 	
-	int playerHP = battler1->GetHP();//플레이어 hp를 초기화
+	//플레이어 hp를 초기화
 	int playerMP = battler1->GetMP();//플레이어 mp를 초기화
 	int playerATT = battler1->GetStrikingPower();//플레이어 공격력을 초기화
 	int playerAMOR = battler1->GetDefensivePower();//플레이어 방어력을 초기화
@@ -112,6 +112,7 @@ void BattleScene::Battle()
 	}
 	Console::ResetColor();
 	cout << *enemy << " 은(는) 체력이 [" << enemyHP << "] 있다." << endl;
+	cout << "플레이어의 hp는 [" << battler1->GetCurrentHP() << "] 남았다." << endl;
 	SkipableSleep(8000);
 	while (1)
 	{
@@ -129,6 +130,7 @@ void BattleScene::Battle()
 
 		if (enemyHP <= 0)//적이 죽었을때
 		{
+			Console::Clear();
 			cout <<*enemy<< " 을(를) 죽였다." << endl << "던전을 계속 진행할까?" << endl;
 
 			ConsoleOption battleMenu = ConsoleOption(
@@ -154,13 +156,13 @@ void BattleScene::Battle()
 
 		Damage = (enemyATT - (playerAMOR / 10)) * ((float)rand() / RAND_MAX + 0.5);
 
-		playerHP = playerHP - Damage;
+		battler1->SetCurrentHP( battler1->GetCurrentHP() - Damage);//데미지 공식
 		cout << *enemy << " 의 공격을 받았다. 데미지 [" << Damage << "] 를 입었다." << endl;
 		SkipableSleep(8000);
-		cout << "나의 체력이 [" << playerHP << "] 남았다." << endl;
+		cout << "나의 체력이 [" << battler1->GetCurrentHP() << "] 남았다." << endl;
 		SkipableSleep(8000);
 
-		if (playerHP <= 0)//플레이어가 죽었을때
+		if (battler1->GetCurrentHP() <= 0)//플레이어가 죽었을때
 		{
 			//씬 호출
 			GetGame()->GetSceneManager()->SetNextScene(std::make_shared<GameoverScene>(GetGame()));
