@@ -119,6 +119,9 @@
     <ClInclude Include="EventScene.h">
       <Filter>씬 파일</Filter>
     </ClInclude>
+    <ClInclude Include="EquipItemManager.h">
+      <Filter>게임 코어 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="The Abyss.cpp">
@@ -201,6 +204,9 @@
     </ClCompile>
     <ClCompile Include="EventScene.cpp">
       <Filter>씬 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipItemManager.cpp">
+      <Filter>게임 코어 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
