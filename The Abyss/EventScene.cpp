@@ -35,31 +35,32 @@ void EventScene::Run()
 
 			"그냥 돌아간다.",
 		},
-			34, 10, 20);
-		
-		switch (eventMenu0.GetSelect()) {
+		34, 10, 20);
+
+		switch (eventMenu0.GetSelect())
+		{
 
 		case 0:
-	     	{
-				Console::Clear();
+		{
+			Console::Clear();
 			std::cout << "돌멩이가 번쩍거리더니 형태가 변했다." << std::endl;
 
 			std::SkipableSleep(1000);
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
-			std::cout << GetItem->GetName()<< "가 나왔다." <<std::endl;
-	      	}
-			break;
-		case 1:
-	        {
-			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
-		    }
-			break;
+			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
 		}
-			
+		break;
+		case 1:
+		{
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+		}
+		break;
+		}
+
 	}
-break;
+	break;
 
 
 	case 2:
@@ -75,7 +76,8 @@ break;
 		},
 		34, 10, 20);
 
-		switch (eventMenu1.GetSelect()) {
+		switch (eventMenu1.GetSelect())
+		{
 
 		case 0:
 		{
@@ -97,11 +99,11 @@ break;
 		}
 
 	}
-break;
+	break;
 
 
 	case 3:
-{
+	{
 		int itemRand = rand() % 2 + 1;
 		std::cout << "석상을 발견하였습니다. 만져 볼까?" << std::endl;
 
@@ -113,7 +115,8 @@ break;
 		},
 		34, 10, 20);
 
-		switch (eventMenu3.GetSelect()) {
+		switch (eventMenu3.GetSelect())
+		{
 
 		case 0:
 		{
@@ -135,11 +138,11 @@ break;
 		}
 
 	}
-break;
+	break;
 
 
-	case 4:	
-{
+	case 4:
+	{
 		int itemRand = rand() % 2 + 1;
 		std::cout << "구멍을 발견하였습니다. 만져 볼까?" << std::endl;
 
@@ -151,7 +154,8 @@ break;
 		},
 		34, 10, 20);
 
-		switch (eventMenu4.GetSelect()) {
+		switch (eventMenu4.GetSelect())
+		{
 
 		case 0:
 		{
@@ -171,12 +175,13 @@ break;
 			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
+		}
 	}
-}
-break;
+	break;
 
 
-	case 5: {
+	case 5:
+	{
 		int itemRand = rand() % 2 + 1;
 		std::cout << "쓰러진 몬스터 사체를 발견하였습니다. 만져 볼까?" << std::endl;
 
@@ -188,7 +193,8 @@ break;
 		},
 		34, 10, 20);
 
-		switch (eventMenu5.GetSelect()) {
+		switch (eventMenu5.GetSelect())
+		{
 
 		case 0:
 		{
@@ -211,25 +217,28 @@ break;
 		}
 	}
 
-break;
-std::SkipableSleep(1000);
+	break;
+	std::SkipableSleep(1000);
 
 
 	case 6:
-	{ 
-		std::cout << "손소독제를 발견하셨습니다." << 
+	{
+		std::cout << "손소독제를 발견하셨습니다." <<
 			std::endl << "손이 깨끗해지는 기분이든다.";
+		std::SkipableSleep(1000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
-	}break;
-std::SkipableSleep(1000);
+	}
+	break;
 
 
 	case 7:
 	{
 		std::cout << "주인공은 춤을 춥니다.";
 		std::cout << "아아 신난다 아이 신나 야 행복하다 ㅎㅎㅎ" << std::endl;
+		std::SkipableSleep(1000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
-	}break;
+	}
+	break;
 
 	}
 
