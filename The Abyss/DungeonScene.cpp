@@ -119,7 +119,7 @@ void DungeonScene::Run()
 
 
 	}
-	if (Event == 2)//특수 이벤트
+	if (Event == 3)//특수 이벤트
 	{
 		std::cout << "!!! 무언가 발견했다 우아아앙!";
 		std::SkipableSleep(1000);

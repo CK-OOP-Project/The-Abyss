@@ -35,7 +35,7 @@ void EventScene::Run()
 
 			"그냥 돌아간다.",
 		},
-			34, 10, 11);
+			34, 10, 20);
 		
 		switch (itemRand) {
 
@@ -73,7 +73,7 @@ break;
 
 			"그냥 돌아간다.",
 		},
-			34, 10, 11);
+		34, 10, 20);
 
 		switch (itemRand) {
 
@@ -111,7 +111,7 @@ break;
 
 			"그냥 돌아간다.",
 		},
-			34, 10, 11);
+		34, 10, 20);
 
 		switch (itemRand) {
 
@@ -124,7 +124,7 @@ break;
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
-			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
+			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
 		}
 		break;
 		case 2:
@@ -149,7 +149,7 @@ break;
 
 			"그냥 돌아간다.",
 		},
-			34, 10, 11);
+		34, 10, 20);
 
 		switch (itemRand) {
 
@@ -162,7 +162,7 @@ break;
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
-			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
+			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
 		}
 		break;
 
@@ -186,7 +186,7 @@ break;
 
 			"그냥 돌아간다.",
 		},
-			34, 10, 11);
+		34, 10, 20);
 
 		switch (itemRand) {
 

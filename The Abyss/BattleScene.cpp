@@ -42,7 +42,7 @@ void BattleScene::Run()
 	case 0://back
 	{
 		int rnd = rand() % 100;
-		if (rnd < 20)
+		if (rnd < 80)
 			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		else
 		{
