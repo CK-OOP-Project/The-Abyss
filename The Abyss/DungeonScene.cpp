@@ -70,9 +70,9 @@ void DungeonScene::printStatus()
 	wsprintfA(attackStr, "공격력 ::      %d", attack);
 	wsprintfA(maxHpStr, "체력   :: %d / %d", currHp, maxHp);
 	wsprintfA(StrengthStr, "힘     ::      %d", strength);
-	wsprintfA(bodyequip, "몸통   ::      %s", bodyitemName->c_str());
-	wsprintfA(weaponequip, "무기   ::      %s", weaponitemName->c_str());
-	wsprintfA(headequip, "머리   ::      %s", headitemName->c_str());
+	wsprintfA(bodyequip, "몸통   ::    %s", bodyitemName->c_str());
+	wsprintfA(weaponequip, "무기   ::    %s", weaponitemName->c_str());
+	wsprintfA(headequip, "머리   ::    %s", headitemName->c_str());
 	ConsoleTextBox inventory = ConsoleTextBox({
 		maxHpStr,attackStr,StrengthStr,"-----------------",bodyequip,weaponequip,headequip,
 
