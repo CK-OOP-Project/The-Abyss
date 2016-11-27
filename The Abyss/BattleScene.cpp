@@ -40,7 +40,17 @@ void BattleScene::Run()
 	switch (battleMenu.GetSelect())
 	{
 	case 0://back
-		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+	{
+		int rnd = rand() % 100;
+		if (rnd < 20)
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+		else
+		{
+			cout << "도주에 실패하였습니다." << endl;
+			std::SkipableSleep(1000);
+			GetGame()->GetSceneManager()->SetNextScene(shared_from_this());
+		}
+	}
 		break;
 	case 1://전투 함수를 실행합니다.
 		Battle();
