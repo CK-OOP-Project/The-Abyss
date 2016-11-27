@@ -4,7 +4,7 @@
 #include "Scene.h"
 #include "MonsterManager.h"
 #include "EquipItem.h"
-
+#include"EventScene.h"
 DungeonScene::DungeonScene(std::weak_ptr<Game> game) : Scene(game)
 {
 	Floor = 0;
@@ -94,7 +94,7 @@ void DungeonScene::Run()
 	Event = rand() % 2 + 1;
 	if (Event == 2)//아무일도 일어나지 않았다.
 	{
-		Console::Clear;
+		Console::Clear();
 		std::cout << "아무 일도 일어나지 않았습니다." << std::endl << "무엇을 하시겠습니까?";
 		int A;
 		printStatus();
@@ -119,16 +119,18 @@ void DungeonScene::Run()
 
 
 	}
-	//if (Event == 2)//특수 이벤트
-	//{
-	//	std::cout << "!!!";
-	//}보류
+	if (Event == 2)//특수 이벤트
+	{
+		std::cout << "!!! 무언가 발견했다 우아아앙!";
+		std::SkipableSleep(1000);
+		GetGame()->GetSceneManager()->SetNextScene(std::make_shared<EventScene>(GetGame()));
+	}
 
 	if (Event == 1)//몬스터 조우
 	{
 		std::cout << "몬스터 출현!!!";
 		Floor++;
-		auto abyssGame = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
+		auto abyssGame = std::dynamic_pointer_cast<AbyssGame>(GetGame());
 		auto battleScene = std::make_shared<BattleScene>(abyssGame, abyssGame->GetPlayerData(), MonsterManager::GetMonster(Floor));
 		GetGame()->GetSceneManager()->SetNextScene(battleScene);
 
