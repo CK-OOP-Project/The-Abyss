@@ -22,14 +22,13 @@ void EventScene::Run()
 {
 	using namespace SteamB23;
 	EventRand = rand() % 7 + 1;
-	
+	Console::Clear();
 	switch (EventRand)
 	{
 	case 1:
 	{
 		int itemRand = rand() % 2 + 1;
 		std::cout << "작은돌맹이를 발견하였습니다. 만져 볼까?" << std::endl;
-		
 		ConsoleOption eventMenu0 = ConsoleOption(
 		{
 			"만진다.",
@@ -42,12 +41,12 @@ void EventScene::Run()
 
 		case 1:
 	     	{
-			Console::Clear();
+		
 			std::cout << "돌멩이가 번쩍거리더니 형태가 변했다." << std::endl;
 
 			std::SkipableSleep(1000);
 
-			std::shared_ptr<EquipItem> GetItem = std::make_shared<EquipItem>();
+			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName()<< "가 나왔다." <<std::endl;
 	      	}
@@ -85,7 +84,7 @@ break;
 
 			std::SkipableSleep(1000);
 
-			std::shared_ptr<EquipItem> GetItem = std::make_shared<EquipItem>();
+			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
 		}
@@ -123,7 +122,7 @@ break;
 
 			std::SkipableSleep(1000);
 
-			std::shared_ptr<EquipItem> GetItem = std::make_shared<EquipItem>();
+			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
 		}
@@ -161,7 +160,7 @@ break;
 
 			std::SkipableSleep(1000);
 
-			std::shared_ptr<EquipItem> GetItem = std::make_shared<EquipItem>();
+			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
 		}

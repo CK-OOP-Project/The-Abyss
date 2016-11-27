@@ -91,7 +91,7 @@ void DungeonScene::Run()
 	auto game = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
 	std::cout << "던전 " << Floor << "층 이다." << std::endl;
 
-	Event = rand() % 2 + 1;
+	Event = rand() % 3 + 1;
 	if (Event == 2)//아무일도 일어나지 않았다.
 	{
 		Console::Clear();
