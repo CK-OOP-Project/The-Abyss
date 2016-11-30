@@ -143,6 +143,10 @@ void BattleScene::Battle()
 		{
 			Console::Clear();
 			cout <<*enemy<< " 을(를) 죽였다." << endl << "던전을 계속 진행할까?" << endl;
+            
+            auto game = dynamic_pointer_cast<AbyssGame>(GetGame());
+            game->SetKillCounter(game->GetKillCounter() + 1);
+
 
 			ConsoleOption battleMenu = ConsoleOption(
 			{
