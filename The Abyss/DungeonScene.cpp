@@ -94,7 +94,7 @@ void DungeonScene::Run()
 	Event = rand() % 3 + 1;
 	if (Event == 2)//아무일도 일어나지 않았다.
 	{
-		Console::Clear();
+		
 		std::cout << "아무 일도 일어나지 않았습니다." << std::endl << "무엇을 하시겠습니까?";
 		int A;
 		printStatus();
