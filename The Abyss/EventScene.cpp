@@ -49,7 +49,7 @@ void EventScene::Run()
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
-			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
+			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
 		}
 		break;
 		case 1:
@@ -88,7 +88,7 @@ void EventScene::Run()
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
-			std::cout << GetItem->GetName() << "가 나왔다." << std::endl;
+			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
 		}
 		break;
 		case 1:
