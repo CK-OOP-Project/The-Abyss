@@ -85,3 +85,9 @@ void PlayerData::SetCurrentHP(int value)
         value = GetHP();
     currentHP = value;
 }
+
+void PlayerData::SetEquipItem(EquipType equipType, std::shared_ptr<EquipItem> value)
+{
+    equipItems[(int)equipType] = value;
+    currentHP = GetHP();
+}
