@@ -61,7 +61,7 @@ void EventScene::Run()
 		break;
 		}
 
-	}std::SkipableSleep(5000);
+	}
 	break;
 
 
@@ -97,12 +97,13 @@ void EventScene::Run()
 		break;
 		case 1:
 		{
+			Console::Clear();
 			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
 		}
 
-	}std::SkipableSleep(5000);
+	}
 	break;
 
 
@@ -138,12 +139,13 @@ void EventScene::Run()
 		break;
 		case 1:
 		{
+			Console::Clear();
 			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
 		}
 
-	}std::SkipableSleep(5000);
+	}
 	break;
 
 
@@ -184,7 +186,7 @@ void EventScene::Run()
 		}
 		break;
 		}
-	}std::SkipableSleep(5000);
+	}
 	break;
 
 
@@ -214,9 +216,7 @@ void EventScene::Run()
 			auto abyssGame = std::dynamic_pointer_cast<AbyssGame>(GetGame());
 			auto battleScene = std::make_shared<BattleScene>(abyssGame, abyssGame->GetPlayerData(), MonsterManager::GetMonster(EventRand));
 			GetGame()->GetSceneManager()->SetNextScene(battleScene);
-			std::SkipableSleep(5000);
-			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
-		}std::SkipableSleep(5000);
+		}
 		break;
 		case 1:
 		{
@@ -225,7 +225,6 @@ void EventScene::Run()
 		break;
 		}
 	}
-	std::SkipableSleep(5000);
 	break;
 	
 
@@ -237,7 +236,7 @@ void EventScene::Run()
 		std::SkipableSleep(5000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 
-	}std::SkipableSleep(5000);
+	}
 	break;
 
 
@@ -248,7 +247,7 @@ void EventScene::Run()
 		std::SkipableSleep(5000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 
-	}std::SkipableSleep(5000);
+	}
 	break;
 
 	}
