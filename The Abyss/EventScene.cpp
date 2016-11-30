@@ -75,6 +75,10 @@ void EventScene::Run()
 	case 2:
 	{
 		int itemRand = rand() % 2 + 1;
+		std::cout << "강철로 이루어진 궤짝들이 더미째로 쌓여 있다." << std::endl;
+		std::SkipableSleep(5000);
+		std::cout << "기묘한 분위기가 풍긴다.." << std::endl;
+		std::SkipableSleep(5000);
 		std::cout << "부셔진 상자를 발견하였습니다. 만져 볼까?" << std::endl;
 
 		ConsoleOption eventMenu1 = ConsoleOption(
@@ -117,7 +121,10 @@ void EventScene::Run()
 	case 3:
 	{
 		int itemRand = rand() % 2 + 1;
-		std::cout << "이곳은 축축한 이끼가 잔뜩낀 석실인듯 하다. 석실 안에서 곰팡이 냄세가 난다." << std::endl;
+		std::cout << "이곳은 축축한 이끼가 잔뜩낀 석실인듯 하다. "<<std::endl;
+		std::SkipableSleep(5000);
+		std::cout<<"석실 안에서 곰팡이 냄세가 난다." << std::endl;
+		std::SkipableSleep(5000);
 		std::cout<<"석상을 발견하였습니다.  만져 볼까 ? " << std::endl;
 
 		ConsoleOption eventMenu3 = ConsoleOption(
@@ -185,7 +192,7 @@ void EventScene::Run()
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
-			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
+			std::cout <<"구멍속에서 "<< GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
 			std::SkipableSleep(5000);
 			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
