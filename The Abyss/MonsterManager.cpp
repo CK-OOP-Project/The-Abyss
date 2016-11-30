@@ -20,62 +20,62 @@ std::shared_ptr<Monster> MonsterManager::GetMonster(int level)
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("어둠의 해골 병사"),
-			std::make_shared<Status>(3, 12, 12, 12),
+			std::make_shared<Status>(3, 12, 12, 52),
 			0);
 		break;
 	case 2:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("걸어다니는 별가사리"),
-			std::make_shared<Status>(3, 3, 3, 100),
+			std::make_shared<Status>(3, 3, 3, 50),
 			0);
 		break;
 	case 3:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("어둠의 해초범벅"),
-			std::make_shared<Status>(3, 1, 1, 100),
+			std::make_shared<Status>(3, 1, 1, 50),
 			0);
 		break;
 	case 4:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("살아 숨쉬는 조별과제"),
-			std::make_shared<Status>(3, 1, 1, 100),
+			std::make_shared<Status>(3, 1, 1, 50),
 			0);
 		break;
 	case 5:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("거 울 (유어 페이스)"),
-			std::make_shared<Status>(3, 1, 1, 100),
+			std::make_shared<Status>(3, 1, 1, 50),
 			0);
 		break;
 	case 6:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("과제하다 죽은 영혼"),
-			std::make_shared<Status>(3, 1, 1, 100),
+			std::make_shared<Status>(3, 1, 1, 50),
 			0);
 		break;
 	case 7:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("저장된 팀 프로젝트가 날라간 3학년"),
-			std::make_shared<Status>(3, 100, 3, 300),
+			std::make_shared<Status>(3, 100, 3, 50),
 			0);
 		break;
 	case 8:
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("담배를 못끊는 아저씨"),
-			std::make_shared<Status>(3, 15, 5, 500),
+			std::make_shared<Status>(3, 15, 5, 50),
 			0);
 		break;
 	case 9:
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("굴러다니는 잉영"),
-			std::make_shared<Status>(10, 0, 0, 100),
+			std::make_shared<Status>(10, 0, 0, 10),
 			0);
 		break;
 	case 10:
@@ -103,7 +103,7 @@ std::shared_ptr<Monster> MonsterManager::GetMonster(int level)
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("윤석현 교수님[데미 갓]"),
-			std::make_shared<Status>(9999, 9999, 9999, 9999),
+			std::make_shared<Status>(100, 109, 109, 109),
 			0);
 		break;
 	case 14:
@@ -137,7 +137,7 @@ std::shared_ptr<Monster> MonsterManager::GetMonster(int level)
 	case 18:
 
 		monster = std::make_shared<Monster>(
-			std::make_shared<std::string>("시마다 겐지(오버워치아님)"),
+			std::make_shared<std::string>("시마다 겐지"),
 			std::make_shared<Status>(3, 1, 1, 100),
 			0);
 		break;
@@ -145,7 +145,7 @@ std::shared_ptr<Monster> MonsterManager::GetMonster(int level)
 
 		monster = std::make_shared<Monster>(
 			std::make_shared<std::string>("the Abyss team"),
-			std::make_shared<Status>(5000, 5000, 5000, 5000),
+			std::make_shared<Status>(500, 500, 500, 500),
 			0);
 		break;
 	}

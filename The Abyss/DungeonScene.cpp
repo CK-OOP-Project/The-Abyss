@@ -28,10 +28,8 @@ void DungeonScene::printStatus()
 	auto game = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
 	auto status = game->GetPlayerData()->GetStatus();
 
-	int maxHp = status->constitution;//최대채력
+	int maxHp = game->GetPlayerData()->GetHP();//최대채력
 	char maxHpStr[30];
-	int strength = status->strength;//힘 
-	char StrengthStr[30];
 
 	auto abyssGame = std::dynamic_pointer_cast<AbyssGame, Game>(GetGame());
 	auto playerdata = abyssGame->GetPlayerData();//플레이어 데이터 가져오기
@@ -69,12 +67,12 @@ void DungeonScene::printStatus()
 
 	wsprintfA(attackStr, "공격력 ::      %d", attack);
 	wsprintfA(maxHpStr, "체력   :: %d / %d", currHp, maxHp);
-	wsprintfA(StrengthStr, "힘     ::      %d", strength);
+
 	wsprintfA(bodyequip, "몸통   ::    %s", bodyitemName->c_str());
 	wsprintfA(weaponequip, "무기   ::    %s", weaponitemName->c_str());
 	wsprintfA(headequip, "머리   ::    %s", headitemName->c_str());
 	ConsoleTextBox inventory = ConsoleTextBox({
-		maxHpStr,attackStr,StrengthStr,"-----------------",bodyequip,weaponequip,headequip,
+		maxHpStr,attackStr,"-----------------",bodyequip,weaponequip,headequip,
 
 	},
 	80 - 30, 0, 30,
@@ -122,6 +120,7 @@ void DungeonScene::Run()
 	if (Event == 3)//특수 이벤트
 	{
 		std::cout << "!!! 무언가 발견했다 우아아앙!";
+		Floor++;
 		std::SkipableSleep(1000);
 		GetGame()->GetSceneManager()->SetNextScene(std::make_shared<EventScene>(GetGame()));
 	}

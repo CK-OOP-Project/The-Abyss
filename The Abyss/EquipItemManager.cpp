@@ -29,7 +29,7 @@ std::shared_ptr<EquipItem> EquipItemManager::GetItem(int level)
 		item = std::make_shared<EquipItem>(
 			std::make_shared<std::string>("ÀúÁÖ¹ŞÀº °Ë"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(200, 5, 5, -300),
+			std::make_shared<Status>(10, 5, 5, -10),
 			0,EquipType::Weapon);
 		break;
 
@@ -37,7 +37,7 @@ std::shared_ptr<EquipItem> EquipItemManager::GetItem(int level)
 		item = std::make_shared<EquipItem>(
 			std::make_shared<std::string>("°­Ã¶ÆÒÆ¼"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(0, 5, 5, -10),
+			std::make_shared<Status>(0, 5, 5, 15),
 			50, EquipType::Body);
 		break;
 
@@ -45,23 +45,23 @@ std::shared_ptr<EquipItem> EquipItemManager::GetItem(int level)
 		item = std::make_shared<EquipItem>(
 			std::make_shared<std::string>("»ç½½°©¿Ê"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(0, 5, 5, 10),
+			std::make_shared<Status>(0, 5, 5, 20),
 			20, EquipType::Body);
 		break;
 
 	case 5:
 			item = std::make_shared<EquipItem>(
-				std::make_shared<std::string>("°¡Á×¿Ê"),
+				std::make_shared<std::string>("°¡Á×¸ğÀÚ"),
 				//(int strength, int intelligence, int dexterity, int constitution)
 				std::make_shared<Status>(0, 5, 5, 10),
-				10, EquipType::Body);
+				10, EquipType::Head);
 			break;
 
 	case 6:
 		item = std::make_shared<EquipItem>(
 			std::make_shared<std::string>("±¤Àü»çÀÇ °©¿Ê"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(200, 5, 5, 50),
+			std::make_shared<Status>(20, 5, 5, 50),
 			-10, EquipType::Body);
 			break;
 	
@@ -69,23 +69,23 @@ std::shared_ptr<EquipItem> EquipItemManager::GetItem(int level)
 		item = std::make_shared<EquipItem>(
 			std::make_shared<std::string>("À±±³¼ö´ÔÀÇ °©¿Ê"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(500, 500, 500, 3000),
-			5000, EquipType::Body);\
+			std::make_shared<Status>(50, 50, 50, 130),
+			5000, EquipType::Body);
 		    break;
 
 	case 8:
 		item = std::make_shared<EquipItem>(
 			std::make_shared<std::string>("À±±³¼ö´ÔÀÇ ¾È°æ"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(200, 5, 5, 300),
+			std::make_shared<Status>(120, 5, 5, 130),
 			5000, EquipType::Head);
 		break;
 
 	case 9:
 		item = std::make_shared<EquipItem>(
-			std::make_shared<std::string>("À±°í¼ö´ÔÀÇ Áö½ÃºÀ"),
+			std::make_shared<std::string>("À±°í¼ö´ÔÀÇ ºÀ"),
 			//(int strength, int intelligence, int dexterity, int constitution)
-			std::make_shared<Status>(200000, 5, 5, 500),
+			std::make_shared<Status>(120, 5, 5, 50),
 			5000, EquipType::Weapon);
 		break;
 	}
