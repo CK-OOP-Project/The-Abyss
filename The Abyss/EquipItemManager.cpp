@@ -4,7 +4,7 @@
 std::shared_ptr<EquipItem> EquipItemManager::GetItem(int level)
 {
 	std::shared_ptr<EquipItem> item;//몰라도 되여
-	int ran = rand() % 1;//아이템 고르는 랜덤값
+	int ran = rand() % 10;//아이템 고르는 랜덤값
 
 	switch (ran)
 	{
