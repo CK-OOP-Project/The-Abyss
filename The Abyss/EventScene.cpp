@@ -50,6 +50,8 @@ void EventScene::Run()
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
+			std::SkipableSleep(5000);
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
 		case 1:
@@ -89,6 +91,8 @@ void EventScene::Run()
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
+			std::SkipableSleep(5000);
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
 		case 1:
@@ -128,6 +132,8 @@ void EventScene::Run()
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
+			std::SkipableSleep(5000);
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
 		case 1:
@@ -167,6 +173,8 @@ void EventScene::Run()
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
 			std::cout << GetItem->GetName()->c_str() << "가 나왔다." << std::endl;
+			std::SkipableSleep(5000);
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}
 		break;
 
@@ -206,9 +214,10 @@ void EventScene::Run()
 			auto abyssGame = std::dynamic_pointer_cast<AbyssGame>(GetGame());
 			auto battleScene = std::make_shared<BattleScene>(abyssGame, abyssGame->GetPlayerData(), MonsterManager::GetMonster(EventRand));
 			GetGame()->GetSceneManager()->SetNextScene(battleScene);
+			std::SkipableSleep(5000);
+			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
 		}std::SkipableSleep(5000);
 		break;
-
 		case 1:
 		{
 			GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
@@ -227,16 +236,18 @@ void EventScene::Run()
 			std::endl << "손이 깨끗해지는 기분이든다.";
 		std::SkipableSleep(5000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+
 	}std::SkipableSleep(5000);
 	break;
 
 
 	case 7:
 	{
-		std::cout << "주인공은 춤을 춥니다.";
+		std::cout << "주인공은 춤을 춥니다." << std::endl;
 		std::cout << "아아 신난다 아이 신나 야 행복하다 ㅎㅎㅎ" << std::endl;
 		std::SkipableSleep(5000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
+
 	}std::SkipableSleep(5000);
 	break;
 
