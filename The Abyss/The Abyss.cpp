@@ -9,18 +9,19 @@ using namespace std;
 
 int main()
 {
-	//try
-	//{
-		shared_ptr<Game> game(make_shared<AbyssGame>());
-		game->Run();
-	////}
-	//catch (exception& ex)
-	//{
-	//	cout << "예외가 발생하였습니다." << endl;
-	//	cout << ex.what() << endl;
-	//}
-	//catch (...){
-	//	cout << "알 수 없는 예외가 발생하였습니다." << endl;
-	//}
+    try
+    {
+        shared_ptr<Game> game(make_shared<AbyssGame>());
+        game->Run();
+    }
+    catch (exception& ex)
+    {
+        cout << "예외가 발생하였습니다." << endl;
+        cout << ex.what() << endl;
+    }
+    catch (...)
+    {
+        cout << "알 수 없는 예외가 발생하였습니다." << endl;
+    }
 }
 

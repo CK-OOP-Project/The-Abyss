@@ -62,7 +62,12 @@ void DungeonScene::printStatus()
 
 
 	int attack = playerdata->GetStrikingPower();//공격력
+
 	char attackStr[30];
+
+
+    // 킬카운터
+    char killCounterStr[30];
 
 
 	wsprintfA(attackStr, "공격력 ::      %d", attack);
@@ -71,8 +76,10 @@ void DungeonScene::printStatus()
 	wsprintfA(bodyequip, "몸통   ::    %s", bodyitemName->c_str());
 	wsprintfA(weaponequip, "무기   ::    %s", weaponitemName->c_str());
 	wsprintfA(headequip, "머리   ::    %s", headitemName->c_str());
+
+    wsprintfA(killCounterStr, "살해   ::    %d", abyssGame->GetKillCounter());
 	ConsoleTextBox inventory = ConsoleTextBox({
-		maxHpStr,attackStr,"-----------------",bodyequip,weaponequip,headequip,
+		maxHpStr,attackStr,"-----------------",bodyequip,weaponequip,headequip,"-----------------",killCounterStr
 
 	},
 	80 - 30, 0, 30,

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SceneManager" Collapsed="true">
+    <Position X="12.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAEggAAAAAAAAIAAAACAAAAAAAAAAAAY=</HashCode>
+      <FileName>SceneManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAgAAAAAAAQAAAAAAIAAAAAAAAAAI=</HashCode>
+      <FileName>Scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="1.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAiAAAAAAAAABAAAAAI=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleTextBox" Collapsed="true">
+    <Position X="12.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEAAAIAABAEhCAIgAAAAAAAAAAAQAEAAgIAAAI=</HashCode>
+      <FileName>ConsoleTextBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleText" Collapsed="true">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIECEAAAIAABAMhOAIgAgAAIAIAAgIwAAAAgAAAAI=</HashCode>
+      <FileName>ConsoleText.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleOption" Collapsed="true">
+    <Position X="14.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEMAAjAAAAAAABACAEAgAAgAAEAICAgAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleOption.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamB23::ConsoleKeyInfo" Collapsed="true">
+    <Position X="12.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIwAAAAAAAAAAAAAACAAAoAAAAAAAAA=</HashCode>
+      <FileName>steamb23console.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamB23::Console" Collapsed="true">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FABACAAEQAoAAAAAiCAACAAAgAABgADAIAABAABAAAI=</HashCode>
+      <FileName>steamb23console.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerCreateScene" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAgI=</HashCode>
+      <FileName>PlayerCreateScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainScene" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAEAAAAAEAAgAAAAAAAAAAI=</HashCode>
+      <FileName>MainScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntroScene" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAgAAAAAAAAAAI=</HashCode>
+      <FileName>IntroScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameoverScene" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>GameoverScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventScene" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAABI=</HashCode>
+      <FileName>EventScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonScene" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAoAAAAAAAgIBgBAAAQAAAAAAAAAAAI=</HashCode>
+      <FileName>DungeonScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreditScene" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>CreditScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleScene" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAAAAAAAAAAAACAgQAAAAAAAAAAAAAAQAAAI=</HashCode>
+      <FileName>BattleScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbyssGame" Collapsed="true">
+    <Position X="3.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAIAAAAgAAkAABAAAAAAAAAAgAAI=</HashCode>
+      <FileName>AbyssGame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsableItem" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsableItem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status" Collapsed="true">
+    <Position X="14.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAEAAAAgAAAAAAAAAAAAAAAAAAQQAAAAAAAAAA=</HashCode>
+      <FileName>Status.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerData" Collapsed="true">
+    <Position X="1.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAEAABAAAAAIAgACEACAAIEQAQgAAQAAABAA=</HashCode>
+      <FileName>PlayerData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterManager" Collapsed="true">
+    <Position X="11" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonsterManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monster" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAgAAAAAACAAAgACEACAEAEAAQgAAQAAABAA=</HashCode>
+      <FileName>Monster.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAEAAAEAAAAAAAAQAAABAA=</HashCode>
+      <FileName>Item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EquipItemManager" Collapsed="true">
+    <Position X="14.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EquipItemManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EquipItem" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAAAAgAAABAAABAAACAAAAAAAAAAAgAAAAAAAAE=</HashCode>
+      <FileName>EquipItem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battler" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAgAAAACAAAEAAQgAAQAAABAA=</HashCode>
+      <FileName>Battler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SteamB23::ConsoleColor" Collapsed="true">
+    <Position X="11" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAGAARBAAAAAgAEQBAAABAABAAAAAAAAAAIADAAAAA=</HashCode>
+      <FileName>steamb23console.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SteamB23::ConsoleKey" Collapsed="true">
+    <Position X="12.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIKq4f9VYZAoCgQIEoEDACkVGg0UFDtKwCCA/v//YWE=</HashCode>
+      <FileName>steamb23console.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EquipType" Collapsed="true">
+    <Position X="14.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAIAAAAABAACAAAAAAAgAAAAAAAAAAQA=</HashCode>
+      <FileName>EquipItem.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
