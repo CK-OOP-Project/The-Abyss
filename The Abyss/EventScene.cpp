@@ -45,7 +45,7 @@ void EventScene::Run()
 			Console::Clear();
 			std::cout << "돌멩이가 번쩍거리더니 형태가 변했다." << std::endl;
 
-			std::SkipableSleep(1000);
+			std::SkipableSleep(5000);
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
@@ -59,7 +59,7 @@ void EventScene::Run()
 		break;
 		}
 
-	}
+	}std::SkipableSleep(5000);
 	break;
 
 
@@ -84,7 +84,7 @@ void EventScene::Run()
 			Console::Clear();
 			std::cout << "상자안에 보물이 담겨져 있다." << std::endl;
 
-			std::SkipableSleep(1000);
+			std::SkipableSleep(5000);
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
@@ -98,7 +98,7 @@ void EventScene::Run()
 		break;
 		}
 
-	}
+	}std::SkipableSleep(5000);
 	break;
 
 
@@ -123,7 +123,7 @@ void EventScene::Run()
 			Console::Clear();
 			std::cout << "석상안에 보물이 담겨져 있다." << std::endl;
 
-			std::SkipableSleep(1000);
+			std::SkipableSleep(5000);
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
@@ -137,7 +137,7 @@ void EventScene::Run()
 		break;
 		}
 
-	}
+	}std::SkipableSleep(5000);
 	break;
 
 
@@ -162,7 +162,7 @@ void EventScene::Run()
 			Console::Clear();
 			std::cout << "구멍안에 보물이 담겨져 있다." << std::endl;
 
-			std::SkipableSleep(1000);
+			std::SkipableSleep(5000);
 
 			std::shared_ptr<EquipItem> GetItem = EquipItemManager::GetItem(1);
 			std::dynamic_pointer_cast<AbyssGame>(GetGame())->GetPlayerData()->SetEquipItem(GetItem->GetEquipType(), GetItem);
@@ -176,7 +176,7 @@ void EventScene::Run()
 		}
 		break;
 		}
-	}
+	}std::SkipableSleep(5000);
 	break;
 
 
@@ -201,12 +201,12 @@ void EventScene::Run()
 			Console::Clear();
 			std::cout << "사체가 아니다 움직이고 있다.!!!!." << std::endl;
 
-			std::SkipableSleep(1000);
+			std::SkipableSleep(5000);
 
 			auto abyssGame = std::dynamic_pointer_cast<AbyssGame>(GetGame());
 			auto battleScene = std::make_shared<BattleScene>(abyssGame, abyssGame->GetPlayerData(), MonsterManager::GetMonster(EventRand));
 			GetGame()->GetSceneManager()->SetNextScene(battleScene);
-		}
+		}std::SkipableSleep(5000);
 		break;
 
 		case 1:
@@ -216,18 +216,18 @@ void EventScene::Run()
 		break;
 		}
 	}
-
+	std::SkipableSleep(5000);
 	break;
-	std::SkipableSleep(1000);
+	
 
 
 	case 6:
 	{
 		std::cout << "손소독제를 발견하셨습니다." <<
 			std::endl << "손이 깨끗해지는 기분이든다.";
-		std::SkipableSleep(1000);
+		std::SkipableSleep(5000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
-	}
+	}std::SkipableSleep(5000);
 	break;
 
 
@@ -235,9 +235,9 @@ void EventScene::Run()
 	{
 		std::cout << "주인공은 춤을 춥니다.";
 		std::cout << "아아 신난다 아이 신나 야 행복하다 ㅎㅎㅎ" << std::endl;
-		std::SkipableSleep(1000);
+		std::SkipableSleep(5000);
 		GetGame()->GetSceneManager()->SetNextScene(DungeonScene::GetInstance(GetGame()));
-	}
+	}std::SkipableSleep(5000);
 	break;
 
 	}
